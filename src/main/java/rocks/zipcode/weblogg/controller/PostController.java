@@ -10,6 +10,9 @@ import rocks.zipcode.weblogg.exception.ResourceNotFoundException;
 import rocks.zipcode.weblogg.model.Post;
 import rocks.zipcode.weblogg.repository.PostRepository;
 
+import java.util.ArrayList;
+import java.util.List;
+
 import javax.validation.Valid;
 
 @RestController
@@ -21,6 +24,12 @@ public class PostController {
     @GetMapping("/posts")
     public Page<Post> getAllPosts(Pageable pageable) {
         return postRepository.findAll(pageable);
+    }
+
+    public List<Post> listAll() {
+        List<Post> counts = new ArrayList<>();
+        postRepository.findAll().forEach(counts::add);
+        return counts;
     }
 
     @PostMapping("/posts")

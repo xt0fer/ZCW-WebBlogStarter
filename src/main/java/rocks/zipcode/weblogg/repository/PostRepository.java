@@ -10,4 +10,5 @@ import rocks.zipcode.weblogg.model.Post;
 @Transactional // do you  need this for mysql??
 public interface PostRepository extends JpaRepository<Post, Long> {
 
+    boolean existsByTitle(String title);
 }

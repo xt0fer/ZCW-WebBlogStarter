@@ -1,10 +1,12 @@
 # Weblogg
 
-Build a simple blog app using spring and database. This ne used Thymeleaf and Bootstrap for the web pages it generates.
+Build a simple blog app using spring and database. This uses Thymeleaf and Bootstrap for the web pages it generates.
 The overall architecture looks like this:
 ![web arch](./Weblogg.png)
 
 Use web pages for it.
+
+This db is currently Postgres. The Mysql config is slightly different.
 
 
 to POST a post

@@ -28,6 +28,14 @@ public class Post extends AuditModel {
     @Lob
     private String content;
 
+    public Post() {}
+    
+    public Post(String title, String content) {
+        this.title = title;
+        this.content = content;
+        this.description = "normal post";
+    }
+
     public Long getId() {
         return this.id;
     }
