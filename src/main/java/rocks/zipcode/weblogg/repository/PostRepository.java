@@ -7,7 +7,7 @@ import org.springframework.transaction.annotation.Transactional;
 import rocks.zipcode.weblogg.model.Post;
 
 @Repository
-@Transactional
+@Transactional // do you  need this for mysql??
 public interface PostRepository extends JpaRepository<Post, Long> {
 
 }
