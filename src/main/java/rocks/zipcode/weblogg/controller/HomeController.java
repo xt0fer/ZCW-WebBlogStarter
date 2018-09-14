@@ -15,12 +15,12 @@ public class HomeController {
     @Autowired
     PostController postController;
 
-@RequestMapping("/")
+    @RequestMapping("/")
     public String index() {
         return "index";
     }
 
-@RequestMapping(value = "/list", method = RequestMethod.GET)
+    @RequestMapping(value = "/list", method = RequestMethod.GET)
     public String postList(Model model) {
         List<Post> posts = postController.listAll();
         model.addAttribute("posts", posts);

@@ -11,8 +11,8 @@ public class Post extends AuditModel {
     private static final String ID2 = "id";
 
     @Id
-    @GeneratedValue(strategy = GenerationType.SEQUENCE) //GenerationType.IDENTITY)
-    //@Column(name = ID2, updatable = false, nullable = false)
+    @GeneratedValue(strategy = GenerationType.SEQUENCE) // GenerationType.IDENTITY)
+    // @Column(name = ID2, updatable = false, nullable = false)
     private Long id;
 
     @NotNull
@@ -28,8 +28,9 @@ public class Post extends AuditModel {
     @Lob
     private String content;
 
-    public Post() {}
-    
+    public Post() {
+    }
+
     public Post(String title, String content) {
         this.title = title;
         this.content = content;
@@ -67,7 +68,5 @@ public class Post extends AuditModel {
     public void setContent(String content) {
         this.content = content;
     }
-
-    // Getters and Setters (Omitted for brevity)
 
 }

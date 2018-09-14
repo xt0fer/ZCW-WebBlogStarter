@@ -28,6 +28,8 @@ public class Comment extends AuditModel {
     @JsonIgnore
     private Post post;
 
+    public Comment() {}
+
     public Long getId() {
         return this.id;
     }

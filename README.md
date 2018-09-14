@@ -4,7 +4,7 @@ Build a simple blog app using spring and database. This uses Thymeleaf and Boots
 The overall architecture looks like this:
 ![web arch](./Weblogg.png)
 
-Use web pages for it.
+Uses web pages for it.
 
 This db is currently Postgres. The Mysql config is slightly different.
 
