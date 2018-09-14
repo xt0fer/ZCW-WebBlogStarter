@@ -2,7 +2,7 @@
 
 Build a simple blog app using spring and database. This ne used Thymeleaf and Bootstrap for the web pages it generates.
 The overall architecture looks like this:
-![web arch][./Weblogg.png]
+![web arch](./Weblogg.png)
 
 Use web pages for it.
 
