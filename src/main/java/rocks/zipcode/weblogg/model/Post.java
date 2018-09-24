@@ -3,6 +3,9 @@ package rocks.zipcode.weblogg.model;
 import javax.persistence.*;
 import javax.validation.constraints.NotNull;
 import javax.validation.constraints.Size;
+import com.fasterxml.jackson.annotation.JsonIgnore;
+import org.hibernate.annotations.OnDelete;
+import org.hibernate.annotations.OnDeleteAction;
 
 @Entity
 @Table(name = "posts")
@@ -28,6 +31,20 @@ public class Post extends AuditModel {
     @Lob
     private String content;
 
+    @ManyToOne(fetch = FetchType.LAZY, optional = false)
+    @JoinColumn(name = "user_id", nullable = false)
+    @OnDelete(action = OnDeleteAction.CASCADE)
+    @JsonIgnore
+    private User user;
+
+    public User getUser() {
+        return this.user;
+    }
+
+    public void setUser(User user) {
+        this.user = user;
+    }
+   
     public Post() {
     }
 
@@ -68,5 +85,6 @@ public class Post extends AuditModel {
     public void setContent(String content) {
         this.content = content;
     }
+ 
 
 }
